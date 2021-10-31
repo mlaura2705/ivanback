@@ -1,0 +1,43 @@
+#second-div{
+    display: flex;
+    justify-content: center;
+}
+#chat{
+    width: 30%;
+    height: 80vh;
+    background-image: url("https://www.todofondos.net/wp-content/uploads/fondo-de-pantalla-predeterminado-de-whatsapp-557x1024.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#div-form{
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
+    
+}
+#form{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    border-right: 1px solid rgb(202, 195, 195);
+    border-left: 1px solid rgb(202, 195, 195);
+
+}
+#form input{
+    border: none;
+    height: 30px;
+}
+#form input:hover{
+    border-bottom: 1px solid black;
+}
+#btn{
+    width: 5%;
+    height: 100%;
+    background: #000;
+    color: #FFF;
+    border-radius: 250px;
+    cursor: pointer;
+}
+#chat p{
+    padding: 0px 15px;
+}

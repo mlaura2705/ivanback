@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <main id="padre">
+        <div id="second-div">
+            <div id="chat"></div>
+        </div>
+        
+        <div id="div-form">
+            <form id="form"  >
+                <input type="text" id="name" placeholder="ingrese su nombre">
+                <input type="text"  id="msj" placeholder="mensaje">
+                <input type="submit"  value=">" id="btn" onclick="send()">
+            </form>
+        </div>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
