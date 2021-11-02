@@ -1,13 +1,12 @@
-const express = require('express');
+const express = require("express");
 const { Router } = express;
-const router = new Router();
-const app = express();
+const router = new Router;
 
-app.use(express.static(__dirname + "./public"));
+
 
 router.get("/",(req,res)=>{
-    res.sendFile("./public/index.html",{root:"."})
-    // res.send("hola")
+    res.sendFile("public/index.html",{root:"."})
 })
+
 
 module.exports = router;

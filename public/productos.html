@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .title h1 {
+        text-align: center;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        font-style: italic;
+      }
+      .principal {
+        display: flex;
+        justify-content: center;
+      }
+      .form {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+      }
+      .form input {
+        padding: 10px 0px;
+        margin: 15px 0px;
+        border: none;
+        border-bottom: 1px solid black;
+      }
+      .btncontainer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .btncontainer .btn {
+        width: 20%;
+        color: #000;
+        background-color: tomato;
+        border-radius: 10px;
+        border: none;
+      }
+      .btncontainer .btn:hover {
+        background-color: rgba(255, 99, 71, 0.425);
+        cursor: pointer;
+      }
+      .cont-table{
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          margin-top: 20px;
+      }
+      .cont-table table{
+          border: 1px solid black;
+      }
+      
+      th {
+        padding: 40px;
+        background-color: red;
+      }
+      td{
+          background-color: rgb(241, 232, 241);
+          width: 100%;
+          height: 100px;
+      }
+      td img{
+          width: 100%;
+          height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="title"><h1>Registro de productos</h1></div>
+    </header>
+
+    <div class="principal">
+      <form action="/" method="post" class="form">
+      <!-- <form class="form"> -->
+        <input type="text" placeholder="Nombre del producto" name="nombre" />
+        <input type="number" placeholder="Precio del producto" name="precio" />
+        <input type="text" placeholder="URL de imagen" name="imagen"  />
+        <div class="btncontainer">
+          <input type="submit" value="Enviar" class="btn" onclick="agregarProducto()" />
+        </div>
+      </form>
+    </div>
+
+    <div class="cont-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Imagen</th>
+          </tr>
+        </thead>
+
+  
+        <!-- <tr>
+          <td id="tableProducto"></td>
+          <td id="tablePrecio"></td>
+          <td id="tableImagen">
+            <img src=""  />
+          </td>
+        </tr> -->
+
+        <button id="btn2" onclick="crear()">enviar</button>
+
+        <div id="elementos"></div>
+      </table>
+    </div>
+
+
+    <script src="../rutas/productos.js"></script>
+</body>
+</html>

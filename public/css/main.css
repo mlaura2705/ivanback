@@ -8,6 +8,7 @@
     background-image: url("https://www.todofondos.net/wp-content/uploads/fondo-de-pantalla-predeterminado-de-whatsapp-557x1024.png");
     background-repeat: no-repeat;
     background-size: 100%;
+    overflow-y: scroll;
 }
 #div-form{
     padding: 10px 0px;

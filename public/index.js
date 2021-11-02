@@ -1,25 +1,36 @@
 const socket = io();
 
-socket.on("send-info", (data) => {
-  render(data)
+socket.on("msjguardados", (datos) => {
+  msjdb(datos);
 });
 
-const render = (data)=>{
-    let html = data.map(x => {
-        return `
-            <p><strong>${x.name}</strong> : ${x.mensaje}</p>
-        `
-    }).join(" ")
-    document.querySelector("#chat").innerHTML = html
+function msjdb(datos) {
+  let ch = document.querySelector("#chat");
+  let html = datos
+    .map((x) => {
+      return `<p><strong>${x.name}:</strong> ${x.mensaje}</p>`;
+    })
+    .join(" ");
+  ch.insertAdjacentHTML("beforeend", html);
 }
 
-let form = document.querySelector("#btn").addEventListener("submit",send);
+let form = document.querySelector("#btn").addEventListener("click", send);
 
 function send(e) {
-    e.preventDefault();
-    let info = {
+  e.preventDefault();
+  let info = {
     name: document.querySelector("#name").value,
     mensaje: document.querySelector("#msj").value,
   };
   socket.emit("informacion", info);
 }
+
+socket.on("send-info", (datos) => {
+  render(datos);
+});
+
+const render = (datos) => {
+    let ch = document.querySelector("#chat");
+    let html = `<p><strong>${datos.name}:</strong>${datos.mensaje}</p>`
+    ch.insertAdjacentHTML("beforeend", html);
+};
