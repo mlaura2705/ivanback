@@ -13,13 +13,17 @@ const PORT = process.env.PORT || 8080;
 
 app.use(express.static(__dirname + "/public"));
 
-
+app.get("/",(req,res)=>{
+  res.send({ruta: "para mensaje ingrese /chat "})
+})
 
 //socket io
 
 server.listen(PORT, () => {
   console.log(`server is run on port ${PORT}`);
 });
+app.use("/productos",productos)
+app.use("/chat",chat);
 
 io.on("connection", (socket) => {
   console.log("usuario conectado!");
@@ -42,5 +46,5 @@ io.on("connection", (socket) => {
       .catch((err) => console.log(err));
   });
 });
-app.use("/productos",productos)
-app.use("/chat",chat);
+
+

@@ -4,9 +4,9 @@ const router = new Router();
 const knex = require("../db");
 
 router.get("/", (req, res) => {
-  res.sendFile("public/productos.html", { root: "." });
+  // res.sendFile("public/productos.html", { root: "." });
   knex("productos")
-    .select("name", "description", "price")
+    .select("id","name", "description", "price")
     .then((x) => {
       res.send(x);
     })
